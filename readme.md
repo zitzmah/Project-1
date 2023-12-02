@@ -1,7 +1,7 @@
 #Project
 ### By Haley Zitzmann
 
-DEPLYOYED SITE: [Click Here](https://sealproject1.vercel.app/)
+DEPLYOYED SITE: [Click Here](https://zitzmah.github.io/Project-1/)
 
 ## Description on Project
 
