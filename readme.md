@@ -53,11 +53,11 @@ Here put a mix of text explanation plus a picture giving us an idea of the layou
 
 #### Desktop View
 
-![My Desktop View](https://imgur.com/a/clyqZhX)
+![My Desktop View](https://imgur.com/a/sJuhCpQ
 
 #### Mobile View
 
-![My Mobile View](https://imgur.com/a/fqZMGBI)
+![My Mobile View](https://imgur.com/a/sJuhCpQ)
 
 ## Schedule of work
 
