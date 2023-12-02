@@ -7,17 +7,17 @@ DEPLYOYED SITE: [Click Here](https://zitzmah.github.io/Project-1/)
 
 A paragraph discussing the idea of your project, the API you are using and desired user experience.
 
-> I am creating a perfume maker, we generate list of perfume ingredient using the items from the perfume ingredient api. Users will select ingredients and generate an imaginary perfume.
+> I am creating a website that looks up New York Times book reviews
 
 ## Details about the API
 
 Give me a brief description of the API you are using and how you plan on using it. Does it use some sort of authentication like an APIkey. List some of the urls are using below.
 
-- `https://www.perfumeapi.com/ingredients`: This returns a json array with all the different ingedients
+- `https://api.nytimes.com/svc/books/v3/reviews.json`: This returns a json array with all of the reviews
 
 Sample Fetch/Ajax called:
 ```js
-const url = "https://www.perfumeapi.com/ingredients"
+const url = "https://api.nytimes.com/svc/books/v3/reviews.json?title="
 fetch(url)
 .then((res) => res.json())
 .then((data) => console.log(data))
@@ -25,48 +25,26 @@ fetch(url)
 
 The Data I get back:
 ```json
-[
-  {
-    "ingredient": "Bergamot",
-    "description": "A citrus fruit with a bright, uplifting scent."
-  },
-  {
-    "ingredient": "Lavender",
-    "description": "A flowering plant with a calming, relaxing scent."
-  },
-  {
-    "ingredient": "Rose",
-    "description": "A flowering plant with a romantic, feminine scent."
-  },
-  {
-    "ingredient": "Jasmine",
-    "description": "A flowering plant with an exotic, sensual scent."
-  },
-  {
-    "ingredient": "Sandalwood",
-    "description": "A woody plant with a warm, earthy scent."
-  },
-  {
-    "ingredient": "Patchouli",
-    "description": "A herb with a deep, musky scent."
-  },
-  {
-    "ingredient": "Vanilla",
-    "description": "A spice with a sweet, gourmand scent."
-  },
-  {
-    "ingredient": "Amber",
-    "description": "A fossilized resin with a warm, balsamic scent."
-  },
-  {
-    "ingredient": "Musk",
-    "description": "An animal secretion with a sensual, musky scent."
-  },
-  {
-    "ingredient": "Oud",
-    "description": "A type of agarwood with a dark, mysterious scent."
-  }
+{
+"status": "OK",
+"copyright": "Copyright (c) 2023 The New York Times Company.  All Rights Reserved.",
+"num_results": 1,
+"results": [
+{
+"url": "https://www.nytimes.com/2018/12/06/books/review/michelle-obama-becoming-memoir.html",
+"publication_dt": "2018-12-06",
+"byline": "Isabel Wilkerson",
+"book_title": "Becoming",
+"book_author": "Michelle Obama",
+"summary": "The former first lady’s long-awaited new memoir recounts with insight, candor and wit her family’s trajectory from the Jim Crow South to Chicago’s South Side and her own improbable journey from there to the White House.",
+"uuid": "00000000-0000-0000-0000-000000000000",
+"uri": "nyt://book/00000000-0000-0000-0000-000000000000",
+"isbn13": [
+"9781524763138"
 ]
+}
+]
+}
 ```
 
 ## Mockup
@@ -75,11 +53,11 @@ Here put a mix of text explanation plus a picture giving us an idea of the layou
 
 #### Desktop View
 
-![My Desktop View](https://i.imgur.com/5Bs7N6B.png)
+![My Desktop View](https://imgur.com/a/clyqZhX)
 
 #### Mobile View
 
-![My Mobile View](https://i.imgur.com/5Bs7N6B.png)
+![My Mobile View](https://imgur.com/a/fqZMGBI)
 
 ## Schedule of work
 
