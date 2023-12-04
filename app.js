@@ -1,8 +1,8 @@
 $.ajax("https://api.nytimes.com/svc/books/v3/reviews.json?title=Becoming&api-key=um9z5rw7W0ubMoP5dQFcqTz9L6RZuJ6T")
-.then((data)=>{
-console.log(data)
-console.log(data.results[0].summary)
-})
+    .then((data) => {
+        console.log(data)
+        console.log(data.results[0].summary)
+    })
 
 //******************************* */
 //GLOBAL VARIABLES
@@ -28,21 +28,27 @@ function getReview(bookTitle) {
 
 }
 
-const url = "https://api.nytimes.com/svc/books/v3/reviews.json?title=Becoming&api-key=um9z5rw7W0ubMoP5dQFcqTz9L6RZuJ6T"
-
-fetch(url)
-.then((res) => res.json())
-.then((data) => console.log(data))
-
 //function that renders the movie to the dom
 function renderReview(book) {
     //grab the div.movie
     const bookdiv = document.querySelector(".book")
-    //alter the HTML inside the div
-    bookdiv.innerHTML = `
-    <h1>${book.results}</h1>
-    <h2>${book.results}</h2>
-    `
+    fetch(document.querySelector(".book"))
+        .then(res => {
+            console.log(res)
+            if (res.status === "ok") {
+                //alter the HTML inside the div
+                bookdiv.innerHTML = `
+     <h1>${book.results[0].book_title}</h1>
+     <h2>${book.results[0].book_author}</h2>
+     <h3>${book.results[0].summary}</h3>
+     <a title="url" href="${book.results[0].url}"')>Link to the New York Times review of ${book.results[0].book_title}<a>
+     `
+            }
+        })
+        .catch((error) =>
+            //bookdiv.innerHTML = `<h1>Sorry we couldn't find that book.</h1>`
+            document.querySelector(".book").innerText = error.message
+        )
 }
 
 //function to handle the form submission
@@ -53,8 +59,15 @@ function handleSubmit(event) {
     const form = event.target
     //create a formData object to access the form formData
     const formData = new FormData(form)
-    //grab the movieTitle
-    const movieTitle = formData.get("bookTitle")
+    //grab the bookTitle
+    const bookTitle = formData.get("bookTitle")
     //fetch the specified
-    getBook(bookTitle)
+    getReview(bookTitle)
 }
+
+//*************************** */
+//MAIN CODE
+//*************************** */
+//add the function to the form submission
+document.querySelector("form").addEventListener("submit", handleSubmit)
+//getReview("Becoming")
