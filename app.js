@@ -25,6 +25,9 @@ function getReview(bookTitle) {
         .then((data) => {
             renderReview(data)
         })
+        .catch((error) => {
+            document.querySelector(".book").innerText = error.message
+        })
 
 }
 
@@ -32,23 +35,13 @@ function getReview(bookTitle) {
 function renderReview(book) {
     //grab the div.movie
     const bookdiv = document.querySelector(".book")
-    fetch(document.querySelector(".book"))
-        .then(res => {
-            console.log(res)
-            if (res.status === "ok") {
-                //alter the HTML inside the div
-                bookdiv.innerHTML = `
+    //alter the HTML inside the div
+    bookdiv.innerHTML = `
      <h1>${book.results[0].book_title}</h1>
      <h2>${book.results[0].book_author}</h2>
      <h3>${book.results[0].summary}</h3>
      <a title="url" href="${book.results[0].url}"')>Link to the New York Times review of ${book.results[0].book_title}<a>
      `
-            }
-        })
-        .catch((error) =>
-            //bookdiv.innerHTML = `<h1>Sorry we couldn't find that book.</h1>`
-            document.querySelector(".book").innerText = error.message
-        )
 }
 
 //function to handle the form submission
