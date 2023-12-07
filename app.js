@@ -4,11 +4,30 @@ $.ajax("https://api.nytimes.com/svc/books/v3/reviews.json?title=Becoming&api-key
         console.log(data.results[0].summary)
     })
 
+$.ajax("https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=um9z5rw7W0ubMoP5dQFcqTz9L6RZuJ6T")
+    .then((data) => {
+        console.log(data)
+        console.log(data.results[0].summary)
+    })
+
+
+$(() => {
+    const $test = $("#test")
+    console.log($test)
+
+    const $h2 = $("<h2>")
+    console.log($h2)
+
+    $h2.text("Hogwarts")
+    $("#test").append($h2)
+})
 //******************************* */
 //GLOBAL VARIABLES
 //******************************* */
 const apikey = "um9z5rw7W0ubMoP5dQFcqTz9L6RZuJ6T"
 const baseURL = "https://api.nytimes.com/svc/books/v3/reviews.json?title="
+
+const authorBaseURL = "https://api.nytimes.com/svc/books/v3/reviews.json?author="
 
 //*************************** */
 //FUNCTIONS
@@ -28,10 +47,9 @@ function getReview(bookTitle) {
         .catch((error) => {
             document.querySelector(".book").innerText = error.message
         })
-
 }
 
-//function that renders the movie to the dom
+//function that renders the book to the dom
 function renderReview(book) {
     //grab the div.movie
     const bookdiv = document.querySelector(".book")
