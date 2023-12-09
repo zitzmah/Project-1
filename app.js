@@ -10,17 +10,13 @@ $.ajax("https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&ap
         console.log(data.results[0].summary)
     })
 
-
-$(() => {
-    const $test = $("#test")
-    console.log($test)
-
-    const $h2 = $("<h2>")
-    console.log($h2)
-
-    $h2.text("Hogwarts")
-    $("#test").append($h2)
-})
+//******************************************* */
+//JQUERY
+//******************************************* */
+$(document).ready(function () {
+    let quote = '<div class="KVquote">\"As for literary criticism in general: I have long felt that any reviewer who expresses rage and loathing for a novel or a play or a poem is preposterous. He or she is like a person who has put on full armor and attacked a hot fudge sundae or a banana split.\"― Kurt Vonnegut</div>';
+    $('header').append(quote)
+});
 //******************************* */
 //GLOBAL VARIABLES
 //******************************* */

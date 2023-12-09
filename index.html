@@ -9,37 +9,42 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,700&family=Titillium+Web:wght@300&display=swap"
+        rel="stylesheet">
+
     <!-- YOUR FILES -->
     <script src="./app.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
 <body>
-    <header>
-        <div class="headerDiv">
-            <h1>New York Times Book Reviews</h1>
-        </div>
-    </header>
-    <main>
-        <div class="form">
-            <form>
-                <div class="titleSearch">
-                    <h3>Search Books</h3>
-                    <input type="text" name="bookTitle" placeholder="type book title">
-                    <button>Search Book</button>
-                </div>
-                <!-- <div class="authorSeach">
-                    <input type="text" name="author" placeholder="type author's name">
-                    <button>Search Author</button>
-                </div> -->
-            </form>
-        </div>
-        <div class="book"></div>
-    </main>
-    <footer>
+    <div class="container">
+        <header>
+            <div class="headerDiv">
+                <h1>New York Times Book Reviews</h1>
+            </div>
+        </header>
+        <main>
+            <div class="form">
+                <form>
+                    <div class="titleSearch">
+                        <h3>Search Books</h3>
+                        <input type="text" name="bookTitle" placeholder="type book title">
+                        <button>Search Book</button>
+                    </div>
+                </form>
+            </div>
+            <div class="book"></div>
+            <div id="circle"></div>
+            <div id="circleTwo"></div>
+        </main>
+        <footer>
 
-    </footer>
-
+        </footer>
+    </div>
 </body>
 
 </html>
