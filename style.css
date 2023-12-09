@@ -25,6 +25,8 @@ h1 {
 
 .titleSearch {
     margin-right: 20px;
+    margin: 20px;
+
 }
 
 .headerDiv {
@@ -32,10 +34,10 @@ h1 {
     width: 50%;
     height: 6em;
     font-size: 3em;
-    flex: 1;
     margin-top: 200px;
-
     text-transform: uppercase;
+    min-width: 400px;
+    flex-shrink: 0;
 }
 
 .container {
@@ -102,11 +104,20 @@ h1 {
     position: absolute;
     top: -20vh;
     left: 60vh;
-    filter: blur(2px);
+    filter: blur(1px);
 }
 
 .titleSearch {
     padding: 5vh;
     font-family: 'Nunito Sans', sans-serif;
 
+}
+
+.button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+}
+
+.input {
+    font-size: 1.2em;
 }

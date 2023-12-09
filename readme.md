@@ -59,8 +59,6 @@ Here put a mix of text explanation plus a picture giving us an idea of the layou
 
 ![My Mobile View](https://i.imgur.com/ftxGord_d.webp?maxwidth=760&fidelity=grand)
 
-## Schedule of work
-
 ## Schedule of Work
 
 |Day | Goal | What I did accomplish |
@@ -73,3 +71,7 @@ Here put a mix of text explanation plus a picture giving us an idea of the layou
 |Thurs| mobile layout styling ||
 | Fri | Desktop layout styling ||
 | Sat | Present Project ||
+
+## Unsolved Problems
+
+I was never able to get the layout to behave the way I wanted it to. There are some problems with the header and the search bar overlapping when the screen is shrunk. I still have a lot to learn about flexbox and css.
