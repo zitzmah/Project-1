@@ -71,16 +71,37 @@ h1 {
     z-index: -2;
 }
 
-.pine {
-    color: #294122;
+#circleThree {
+    background-color: rgba(205, 209, 228);
+    background: linear-gradient(rgba(to right 205, 209, 228, 0.1), rgba(82, 78, 183, .8));
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    box-shadow: inset -1vh -1vh 5vh 0 rgba(82, 78, 183),
+        inset 0 98px 99px 0px #fff,
+        inset 0 -99px 99px 1px #fa1dca,
+        1vh 1vh 1em 1.5px rgba(82, 78, 183);
+    opacity: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 45vh;
+    left: 30vh;
 }
 
-.salmon {
-    color: #FFBBA6;
-}
-
-.tangerine {
-    color: #EB3D00;
+#circleFour {
+    background-color: rgb(252, 115, 3);
+    background: linear-gradient(217deg, rgba(255, 102, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(116, 45, 248, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(255, 0, 212, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    box-shadow: 1vh 1vh 2em 1.5px rgba(255, 0, 212, 0.8);
+    opacity: 99%;
+    z-index: -2;
+    position: absolute;
+    top: -20vh;
+    left: 60vh;
 }
 
 .titleSearch {
